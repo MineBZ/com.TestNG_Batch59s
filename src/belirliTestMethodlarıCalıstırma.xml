@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="istenen methodlar" verbose="3">
+    <test name="method">
+        <!--
+        Bir classda tüm test methodları calışacaksa bunun için
+        direk class seçmek yeterlidir.
+        Method seçmemizin temel amacı class içerisinde belirlenen
+        methodların calışması veya belirlenen methodlar dışındaki tüm methodların
+
+        -->
+        <classes>
+            <class name="tests.day16_notations.C03_Priority">
+                <methods>
+                    <include name="test02"></include>
+                </methods>
+            </class>
+            <class name="tests.day16_notations.C04_DependsOnMethod">
+                <methods>
+                    <exclude name="test03"></exclude>
+                </methods>
+
+            </class>
+
+        </classes>
+    </test>
+</suite>
